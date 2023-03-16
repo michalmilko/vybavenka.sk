@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "../src/App.css"
+import FullApp from "./components/FullApp"
+import CelyFilter from "./components/Menu/CelyFilter"
+import { useState, useEffect } from "react"
+import Menu from "./components/Menu/Menu"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const App = () =>{
+  const[katega,setKategapas]=useState("Vsetko");
+  const [data, setData] = useState([]);
+  let dataa;
+  
+  useEffect(() => {
+    fetch('http://localhost:3005/data')
+    .then(response=>response.json())
+    .then(dataaa=>setData(dataaa))
+  }, []);
+
+  if(katega==="Vsetko"){
+   dataa  = data.filter(posun=>posun.Kategoria);
+  }else{
+   dataa = data.filter(posun=>posun.Kategoria===katega);
+  }
+  
+  const FUnk=()=>  dataa.map((sup)=>{   
+    const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis}=sup;
+      return(
+        <div key={id} className="appCele">
+          <FullApp Data={data}
+          id={id}
+          prezivkaUser={MenoPriezvisko}
+          nazov={Nazov}
+          image={Image}
+          kategoria={Kategoria}
+          kvalita={Kvalita}
+          popis={Popis}
+          />
+        </div>
+      )})
+
+      return(
+        <div>  
+          <Menu setKategapas={setKategapas}/>
+          {FUnk()}
+        </div>
+
+      )
 }
-
-export default App;
+export default App

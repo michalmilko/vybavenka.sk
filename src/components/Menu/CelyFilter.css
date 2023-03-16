@@ -1,0 +1,45 @@
+.celyFilterBox-Fix{
+   display:contents;
+   position: fixed;
+   width: 100%;
+   z-index: 0;
+   margin-bottom: 50px;
+
+
+   
+}
+.celyFilterBox{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   margin-top: 40px;
+ 
+}
+
+
+.hladajBox{
+   padding: 9px;
+   font-size: 17px;
+   background-color: white;
+   border-radius: 50px;
+   width: 30%;
+   text-align: center;
+   border: none;
+   
+}
+
+.kategoria{
+  
+   padding: 9px;
+   font-size: 17px;
+   background-color: white;
+   border-radius: 50px;
+   width: 30%;
+   text-align: center;
+   color: rgb(114, 112, 112);
+}
+.kategoria option{
+   background-color: white;
+   
+}

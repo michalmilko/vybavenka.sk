@@ -1,0 +1,16 @@
+.box{
+   /* width: 95%; */
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 5px;
+   border-radius: 5px;
+   border: #495057 2px solid;
+   min-height: 400px;
+}
+.boxFull{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}

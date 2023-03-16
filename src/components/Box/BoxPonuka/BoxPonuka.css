@@ -1,0 +1,39 @@
+.box{
+   width: 95%;
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 5px;
+   border: #495057 2px solid;
+   height: 500px;
+   background-color: #2b3035;
+   
+}
+.box p{
+   background-color: #2b3035;
+}
+.box h1{
+   background-color: #2b3035;
+   text-align: center;
+   margin-bottom: 5px;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.boxFull{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: #2b3035;
+}
+.boxSlider{
+   background-color: #2b3035;
+   width: 458px;
+   height: 100%;
+   
+}
+.boxPopis{
+
+}
+.buttonBuy{
+   margin-top: 5px;
+}

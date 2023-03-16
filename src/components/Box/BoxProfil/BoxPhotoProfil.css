@@ -1,0 +1,23 @@
+.BoxPhoto div{
+   display:block;
+   background-color: rgb(58, 221, 221);
+   width: 60px;
+   height: 60px;
+   
+   border-radius: 50px;
+  
+   border: 2px solid #2b3035;
+   
+}
+.BoxPhoto{
+   border: 2px solid #495057;
+   margin-top: 5px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   padding: 20px;
+}
+.BoxPhoto p{
+   font-size: 23Npx;
+}
