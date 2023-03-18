@@ -5,7 +5,6 @@ import { useState } from "react"
 
 const FullApp = (props) =>{
 
-   
 
   const PreklikPonuka=()=>{
       setCheckPonuka(<BoxPonuka PresunProfil={PreklikProfil} Dataa={props.Data} id={props.id} nazov={props.nazov} kategoria={props.kategoria} image={props.image} kvalita={props.kvalita} popis={props.popis}/>)

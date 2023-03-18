@@ -1,18 +1,15 @@
 import "./CelyFilter.css"
-import { useState } from "react";
-import imageAdd from "../../images/add.png"
-const CelyFilter = ({setKategapas}) =>{
- 
+
+const CelyFilter = ({setKategapas}) => {
+  
    const zistenieKategorie=(event)=>{
+      
       setKategapas(event.target.value);
    }
-
    return(
       <div className="celyFilterBox-Fix">
        <div className="celyFilterBox">
           
-
-
          <select className="kategoria" defaultValue="Všetko" onChange={zistenieKategorie}>
          <option value={"Vsetko"} >Všetko</option>
          <option value={"Školske"}>Školske</option>

@@ -1,44 +1,13 @@
-// const express = require('express');
-// const cors = require('cors');
-// const { getConnection } = require('./db');
-
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
-
-// app.get('/data', (req, res) => {
-//   const sql = 'SELECT * FROM bookusers';
-//   const connection = getConnection();
-//   connection.query(sql, (error, results) => {
-//       if (error) throw error;
-//       res.send(results);
-//   });
-// });
-
-// app.post('/data', (req, res) => {
-//   const { Nazov, Image, Kategoria, Kvalita, Popis } = req.body;
-//   const sql = 'INSERT INTO bookusers (id, MenoPriezvisko, Nazov, Image, Kategoria, Kvalita, Popis) VALUES (NULL, "ANoo", ?, ?, ?, ?, ?)';
-//   const values = [Nazov, Image, Kategoria, Kvalita, Popis];
-  
-//   const connection = getConnection();
-//   connection.query(sql, values, (error, result) => {
-//     if (error) throw error;
-//     console.log('Data inserted successfully');
-//     res.send('Data inserted successfully');
-//   });
-// });
-
-// app.listen(3005, () => {
-//   console.log('Server bude spustený na porte 3005!');
-// });
-
 const express = require('express');
 const cors = require('cors');
 const { getConnection } = require('./db');
 const multer = require('multer');
 const path = require('path');
 
+
+
 const app = express();
+app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(cors());
 app.use(express.json());
 
@@ -46,6 +15,7 @@ app.use(express.json());
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './images');
+    
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' + file.originalname);
@@ -65,10 +35,10 @@ app.get('/data', (req, res) => {
 });
 
 app.post('/data', upload.single('Image'), (req, res) => {
-  const { Nazov, Kategoria, Kvalita, Cena, Image } = req.body;
+  const { Nazov, Kategoria, Kvalita, Cena } = req.body;
 
-  const sql = 'INSERT INTO bookusers (id, MenoPriezvisko, Nazov, Image, Kategoria, Kvalita, Popis) VALUES (NULL, "ANoo", ?, ?, ?, ?, ?)';
-  const values = [Nazov, Image, Kategoria, Kvalita, Cena];
+  const sql = 'INSERT INTO bookusers (id, MenoPriezvisko, Nazov, Image, Kategoria, Kvalita, Popis) VALUES (NULL,"Zuzka", ?, ?, ?, ?, ?)';
+  const values = [Nazov, req.file.filename, Kategoria, Kvalita, Cena];
   
   const connection = getConnection();
   connection.query(sql, values, (error, result) => {

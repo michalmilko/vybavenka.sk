@@ -8,16 +8,14 @@ const Add = () => {
   const [option2, setOption2] = useState('');
   const [file, setFile] = useState(null);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit  = async (event) => {
     const formData = new FormData();
     formData.append('Nazov', text1);
     formData.append('Kategoria', option1);
     formData.append('Kvalita', option2);
     formData.append('Cena', text2);
     formData.append('Image', file);
-console.log(file);
-console.log(Image);
+
     // Odoslanie dát na server
     try {
       const response = await fetch('http://localhost:3005/data', {
@@ -29,6 +27,7 @@ console.log(Image);
     } catch (error) {
       console.error(error);
     }
+    event.preventDefault();
   }
 
   return (
@@ -89,4 +88,3 @@ console.log(Image);
   
 }
 export default Add;
-

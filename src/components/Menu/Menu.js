@@ -1,5 +1,4 @@
 import "./Menu.css"
-import App from "./Add"
 import Add from "./Add"
 import CelyFilter from "./CelyFilter"
 import imageAdd from "../../images/add.png"
@@ -10,24 +9,18 @@ import { debounce } from "lodash"
 
 
 const Menu = (props) => {
-  
 const[celyFilter, setcelyFilter]=useState(<CelyFilter setKategapas={props.setKategapas}/>);
 const[addChangeBool, setaddChangeBool]=useState(true);
 const[zmenaIcon, setzmenaIcon]=useState(imageAdd);
 
 
 const SwitchAdd = debounce(() => {
- 
-    if(addChangeBool===true){
-      
+    if(addChangeBool){
          setcelyFilter(<Add/>)
-
          setaddChangeBool(false);
          setzmenaIcon(imageCancel);
    }else{
-     
       setcelyFilter(<CelyFilter setKategapas={props.setKategapas}/>)
-    
       setaddChangeBool(true);
       setzmenaIcon(imageAdd);
    }

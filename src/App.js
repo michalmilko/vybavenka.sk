@@ -1,26 +1,30 @@
-import "../src/App.css"
-import FullApp from "./components/FullApp"
-import CelyFilter from "./components/Menu/CelyFilter"
-import { useState, useEffect } from "react"
-import Menu from "./components/Menu/Menu"
+import "./App.css";
+import FullApp from "./components/FullApp";
+import { useState, useEffect } from "react";
+import Menu from "./components/Menu/Menu";
 
-
-
-const App = () =>{
+const App = (props) =>{
+ 
+  //useState - nacitanie aka kategoria je vybrata
   const[katega,setKategapas]=useState("Vsetko");
+ 
   const [data, setData] = useState([]);
   let dataa;
+
   
-  useEffect(() => {
-    fetch('http://localhost:3005/data')
+ useEffect(() => {
+    fetch("http://localhost:3005/data")
     .then(response=>response.json())
     .then(dataaa=>setData(dataaa))
   }, []);
 
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
+ 
   }else{
    dataa = data.filter(posun=>posun.Kategoria===katega);
+ 
+  
   }
   
   const FUnk=()=>  dataa.map((sup)=>{   
@@ -31,7 +35,7 @@ const App = () =>{
           id={id}
           prezivkaUser={MenoPriezvisko}
           nazov={Nazov}
-          image={Image}
+          image={'http://localhost:3005/images/'+Image}
           kategoria={Kategoria}
           kvalita={Kvalita}
           popis={Popis}
@@ -40,9 +44,14 @@ const App = () =>{
       )})
 
       return(
-        <div>  
+        <div> 
+          <div className="me">
           <Menu setKategapas={setKategapas}/>
+          </div>
+          <div className="fi">
+          
           {FUnk()}
+          </div>
         </div>
 
       )
