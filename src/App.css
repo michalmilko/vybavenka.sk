@@ -1,14 +1,17 @@
 .appCele{
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
    background-color: #212529;
+ 
 }
-.fi{
+
+.menu1{
 margin-top: 195px;
-z-index: 0;
 }
+.menu2{
+   margin-top: 530px;
+   }
 .me{
    position: fixed;
    top: 0;
-  width: 100%;
-  z-index: 551;
+   width: 100%;
 }

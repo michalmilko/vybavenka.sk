@@ -1,9 +1,6 @@
 .addMenu{
-   /* border: red 2px solid; */
    background-color: #212529;
-   /* position: fixed; */
    width: 100%;
- 
    border-bottom: rgb(58, 221, 221) 1px solid;
    padding-top: 20px;
 }

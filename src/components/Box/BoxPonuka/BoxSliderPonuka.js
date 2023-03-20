@@ -11,10 +11,10 @@ const BoxSliderPonuka = (props) =>{
                   <img src={props.image} alt="" />
                   </div>
                   <div className="kategoriaKvalita">
-                  <p>{"Kategoria:"} {props.kategoria}</p>
-                  <p>{"Kvalita Knihy:"} {props.kvalita}</p>
+                  <p>Kategoria: {props.kategoria}</p>
+                  <p>Kvalita Knihy: {props.kvalita}</p>
                   </div>
-                  <p className="cenaSlider">{"Cena:"} {props.popis}{"€"}</p>
+                  <p className="cenaSlider">Cena: {props.popis}{"€"}</p>
                   <button className="buttonBuy">Objednať</button>
                </div>
                )

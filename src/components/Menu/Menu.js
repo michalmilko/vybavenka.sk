@@ -7,22 +7,24 @@ import { useState} from "react"
 import { debounce } from "lodash"
 
 
-
-const Menu = (props) => {
-const[celyFilter, setcelyFilter]=useState(<CelyFilter setKategapas={props.setKategapas}/>);
+const Menu = ({setKategapas, setInfo}) => {
+const[celyFilter, setcelyFilter]=useState(<CelyFilter setKategapas={setKategapas}/>);
 const[addChangeBool, setaddChangeBool]=useState(true);
 const[zmenaIcon, setzmenaIcon]=useState(imageAdd);
 
 
 const SwitchAdd = debounce(() => {
     if(addChangeBool){
-         setcelyFilter(<Add/>)
          setaddChangeBool(false);
+         setInfo(false);
+         setcelyFilter(<Add/>)
          setzmenaIcon(imageCancel);
+         
    }else{
-      setcelyFilter(<CelyFilter setKategapas={props.setKategapas}/>)
-      setaddChangeBool(true);
-      setzmenaIcon(imageAdd);
+         setaddChangeBool(true);
+         setInfo(true);
+         setcelyFilter(<CelyFilter setKategapas={setKategapas}/>)
+         setzmenaIcon(imageAdd);
    }
 
 },100);
