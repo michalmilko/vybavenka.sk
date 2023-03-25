@@ -41,7 +41,7 @@ const App = () =>{
           popis={Popis}
           />
         </div>
-      )})
+      )}).reverse();
 //Zobrazenie na stranke
       return(
         <div className="skusi"> 
