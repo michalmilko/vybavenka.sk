@@ -1,9 +1,8 @@
 .celyFilterBox-Fix{
-   display:contents;
+   display:contents; 
    position: fixed;
    width: 100%;
-   z-index: 0;
-   margin-bottom: 50px;
+   /* margin-bottom: 50px;  */
 }
 .celyFilterBox{
    display: flex;

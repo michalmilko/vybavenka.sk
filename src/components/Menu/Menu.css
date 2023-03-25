@@ -1,29 +1,7 @@
-.addMenu{
-   background-color: #212529;
+.addMenus{
+   background-color: #2b3035;
    width: 100%;
    border-bottom: rgb(58, 221, 221) 1px solid;
    padding-top: 20px;
-}
-.addMenuButton{
-   width: 60px;
-   margin: 10px;
-   cursor: pointer;
-
-}
-.addMenuImage{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-}
-.menuPridatKnihu{
-   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-   font-size: 18px;
-   margin-bottom: 20px;
-   cursor: pointer;
-   color: rgb(58, 221, 221);
-}
-.menuPridatKnihuvypnut{
-   display: none;
-   
+   padding-bottom: 20px;
 }

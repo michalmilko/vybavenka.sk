@@ -5,9 +5,10 @@
 .FullApp{
    width: 100%;
    min-height: 500px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   /* display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap; */
    color: #fff;
    margin-bottom: 5px;
  
@@ -15,5 +16,5 @@
 .fullAppMenu{
    position: fixed;
    width: 100%;
-  background-color: #212529;
+   background-color: #212529;
 }

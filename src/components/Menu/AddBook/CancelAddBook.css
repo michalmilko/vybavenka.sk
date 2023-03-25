@@ -1,0 +1,12 @@
+.fixedCeleAdd{ 
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.imageAdd{
+}
+.imageAdd:hover{
+   transform: scale(1.1);
+   
+}
