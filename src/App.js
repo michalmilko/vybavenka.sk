@@ -1,11 +1,9 @@
 import "./App.css";
-import FullApp from "./components/FullApp";
+import Inzerat from "./components/Inzerat";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 
-
 const App = () =>{
-  
   let dataa;
   //useState - nacitanie aka kategoria je vybrata
   const[katega,setKategapas]=useState("Vsetko");
@@ -17,7 +15,6 @@ const App = () =>{
     .then(dataaa=>setData(dataaa))
   }, []);
   
-  
   //Porovnanie kategoria.. v Menu
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
@@ -25,13 +22,12 @@ const App = () =>{
    dataa = data.filter(posun=>posun.Kategoria===katega);
   }
 
-
   //Filter kategoria
   const FUnk=()=>  dataa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis}=sup;
       return(
         <div key={id} className="appCele">
-          <FullApp Data={data}
+          <Inzerat Data={data}
           id={id}
           prezivkaUser={MenoPriezvisko}
           nazov={Nazov}
@@ -46,7 +42,7 @@ const App = () =>{
       return(
         <div className="CelyHead"> 
           <div className="Head">
-          <h1 className="NadpisLogo">VYHLADAJ SVOJ KNIHU</h1>
+          <h1 className="NadpisLogo">V Y B A V E N K A</h1>
           </div>
           <div className={"CeleBody"}>
           {FUnk()}
