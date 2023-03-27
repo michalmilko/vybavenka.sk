@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import imageCancel from "../../../images/cancel.png";
 import "./AddBook.css";
 
 const Add = ({setboolAddChange}) => {
@@ -30,17 +29,13 @@ const Add = ({setboolAddChange}) => {
     }
     event.preventDefault();
   }
-const Zmena = () =>{
-  setboolAddChange(true);
-}
+
   return (
     <div className='fixedCeleCancel'>
     <div className="addCelyObsah">
    
     <form onSubmit={handleSubmit}>
-      <div className='ss' onClick={()=>{Zmena()}}>
-         <img className='imageCancel'  src={imageCancel} alt=""/>
-         </div>
+      
        <div>
       <h2 className="addNadpisCely">PRIDAJ KNIHU NA PREDAJ</h2>
       </div>

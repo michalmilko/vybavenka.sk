@@ -2,7 +2,7 @@ import "./App.css";
 import FullApp from "./components/FullApp";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
-import MenuAddBook from "./components/Menu/MenuAddBook"
+
 
 const App = () =>{
   
@@ -44,14 +44,15 @@ const App = () =>{
       )}).reverse();
 //Zobrazenie na stranke
       return(
-        <div className="skusi"> 
-          <div className="me">
-          <Menu setKategapas={setKategapas}/>
+        <div className="CelyHead"> 
+          <div className="Head">
+          <h1 className="NadpisLogo">VYHLADAJ SVOJ KNIHU</h1>
           </div>
-          <div className={"menu1"}>
+          <div className={"CeleBody"}>
           {FUnk()}
           </div>
-          <MenuAddBook/>
+          <Menu setKategapas={setKategapas}/>
+         
         </div>
       )
 }
