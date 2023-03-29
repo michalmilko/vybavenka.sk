@@ -8,14 +8,17 @@ const Add = ({setboolAddChange}) => {
   const [option2, setOption2] = useState('');
   const [file, setFile] = useState(null);
 
+  
+
   const handleSubmit  = async (event) => {
+   
     const formData = new FormData();
     formData.append('Nazov', text1);
     formData.append('Kategoria', option1);
     formData.append('Kvalita', option2);
     formData.append('Cena', text2);
     formData.append('Image', file);
-
+ 
     // Odoslanie dát na server
     try {
       const response = await fetch('http://localhost:3005/data', {
@@ -42,13 +45,15 @@ const Add = ({setboolAddChange}) => {
       <div className='addNadpisNazov'>
       <label>
       <h5>Nazov Knihy</h5>
-        <input className="addNazov" placeholder="Nazov" type="text" value={text1} onChange={(event) => setText1(event.target.value)} />
+        <input className="addNazov" placeholder="Nazov" type="text" required minLength={2} maxLength={25} value={text1}
+       onChange={(event) => setText1(event.target.value)} />
+  
       </label>
       </div>
       <div className='addKategoriaKvalita'>
       <label>
       <h5>Kategoria</h5>
-        <select className="addKategoria" value={option1} onChange={(event) => setOption1(event.target.value)}>
+        <select className="addKategoria" value={option1} required onChange={(event) => setOption1(event.target.value)}>
           <option value=""></option>
           <option value={"Školske"}>Školske</option>
          <option value={"Roman"}>Roman</option>
@@ -59,7 +64,7 @@ const Add = ({setboolAddChange}) => {
       </label>
       <label>
       <h5>Kvalita</h5>
-        <select className="addKvalita" value={option2} onChange={(event) => setOption2(event.target.value)}>
+        <select className="addKvalita" value={option2} required onChange={(event) => setOption2(event.target.value)}>
           <option value=""></option>
           <option value={"100%"} >100%</option>
          <option value={"80%"}>80%</option>
@@ -73,13 +78,13 @@ const Add = ({setboolAddChange}) => {
       <div className='addFileUpload'>
       <label>
         <h5>Nahrať knihu</h5>
-        <input className="addFile" type="file" onChange={(event) => setFile(event.target.files[0])} />
+        <input className="addFile" type="file" required accept=".png, .jpg, .jpeg" onChange={(event) => setFile(event.target.files[0])} />
       </label>
       </div>
       <div className='addCenaPredaja'>
       <label>
       <h5>Cena predaja</h5>
-        <input className="addCena"  type="price" placeholder="Cena" value={text2} onChange={(event) => setText2(event.target.value)} />
+        <input className="addCena"  type="number" min="0" required placeholder="Cena" value={text2} onChange={(event) => setText2(event.target.value)} />
       </label>
       </div>
       <div className='addButton'>

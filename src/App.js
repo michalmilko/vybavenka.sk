@@ -2,9 +2,12 @@ import "./App.css";
 import Inzerat from "./components/Inzerat";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
+import Head from "./components/Head"
 
 const App = () =>{
   let dataa;
+  //useState - search
+  const [textSearch, setSearch]=useState();
   //useState - nacitanie aka kategoria je vybrata
   const[katega,setKategapas]=useState("Vsetko");
   const [data, setData] = useState([]);
@@ -20,7 +23,9 @@ const App = () =>{
    dataa  = data.filter(posun=>posun.Kategoria);
   }else{
    dataa = data.filter(posun=>posun.Kategoria===katega);
+  //  console.log(dataa);
   }
+
 
   //Filter kategoria
   const FUnk=()=>  dataa.map((sup)=>{   
@@ -41,14 +46,11 @@ const App = () =>{
 //Zobrazenie na stranke
       return(
         <div className="CelyHead"> 
-          <div className="Head">
-          <h1 className="NadpisLogo">V Y B A V E N K A</h1>
-          </div>
+          <Head setSearch={setSearch}/>
           <div className={"CeleBody"}>
           {FUnk()}
           </div>
           <Menu setKategapas={setKategapas}/>
-         
         </div>
       )
 }
