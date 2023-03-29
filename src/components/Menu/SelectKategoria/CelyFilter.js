@@ -19,10 +19,6 @@ const CelyFilter = ({setKategapas}) => {
          <option value={"Scifi"}>Scifi</option>
          <option value={"Rozpravka"}>Rozpravka</option>
          </select>
-         
-         <input className="hladajBox" placeholder="Hladaj"/>
-
-         
          </div>
       </div>
    )

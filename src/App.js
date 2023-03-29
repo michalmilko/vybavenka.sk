@@ -6,8 +6,9 @@ import Head from "./components/Head"
 
 const App = () =>{
   let dataa;
+  let dataaa;
   //useState - search
-  const [textSearch, setSearch]=useState();
+  const [textSearch, setSearch]=useState([]);
   //useState - nacitanie aka kategoria je vybrata
   const[katega,setKategapas]=useState("Vsetko");
   const [data, setData] = useState([]);
@@ -21,14 +22,17 @@ const App = () =>{
   //Porovnanie kategoria.. v Menu
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
+   dataaa = dataa.filter(posunn=>posunn.Nazov.includes(textSearch));
+   console.log(dataa);
   }else{
    dataa = data.filter(posun=>posun.Kategoria===katega);
-  //  console.log(dataa);
+   dataaa = dataa.filter(posunn=>posunn.Nazov.includes(textSearch));
+   console.log(dataa);
   }
 
 
   //Filter kategoria
-  const FUnk=()=>  dataa.map((sup)=>{   
+  const FUnk=()=>  dataaa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis}=sup;
       return(
         <div key={id} className="appCele">

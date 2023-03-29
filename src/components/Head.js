@@ -1,5 +1,4 @@
 import "./Head.css"
-import { useState } from "react"
 
 const Head = ({setSearch}) =>{
 
