@@ -3,15 +3,19 @@ import Inzerat from "./components/Inzerat";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head"
+import { toLower } from "lodash";
 
 const App = () =>{
+
   let dataa;
   let dataaa;
+
   //useState - search
-  const [textSearch, setSearch]=useState([]);
+  const [textSearch, setSearch]=useState("");
   //useState - nacitanie aka kategoria je vybrata
   const[katega,setKategapas]=useState("Vsetko");
   const [data, setData] = useState([]);
+
   //Nacitanie z mysql kategoriu pre filter
  useEffect(() => {
     fetch("http://localhost:3005/data")
@@ -22,12 +26,12 @@ const App = () =>{
   //Porovnanie kategoria.. v Menu
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
-   dataaa = dataa.filter(posunn=>posunn.Nazov.includes(textSearch));
-   console.log(dataa);
+   dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
+ 
+   
   }else{
    dataa = data.filter(posun=>posun.Kategoria===katega);
-   dataaa = dataa.filter(posunn=>posunn.Nazov.includes(textSearch));
-   console.log(dataa);
+   dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
   }
 
 
