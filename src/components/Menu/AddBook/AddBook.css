@@ -136,6 +136,7 @@ option{
 .addButton{
    display: flex;
    justify-content: center;
+   
 }
 
 .addSubmit{
@@ -147,6 +148,7 @@ option{
    border-radius: 50px;
    background-color: rgb(58, 221, 221);
    text-align: center;
+   
 }
 .addSubmit:hover{
    background-color: rgb(49, 148, 148);

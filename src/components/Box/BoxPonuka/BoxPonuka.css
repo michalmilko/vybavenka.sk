@@ -1,16 +1,10 @@
 .box{
   width: 95%;
-   margin-top: 200px;
+   /* margin-top: 200px; */
    border-radius: 5px;
    border: #495057 2px solid;
-   height: 500px;
+   min-height: 525px;
    background-color: #2b3035;
+   height: 90%;
 }
 
-.boxSlider{
-   background-color: #2b3035;
-}
-
-.buttonBuy{
-   margin-top: 5px;
-}

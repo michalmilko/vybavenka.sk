@@ -1,17 +1,18 @@
 import "./CelyFilter.css"
 
 const CelyFilter = ({setKategapas}) => {
-  
+ 
+  //z kategorie zistenie filter
    const zistenieKategorie=(event)=>{
-      
       setKategapas(event.target.value);
+     
+     
    }
    return(
-      <div className="celyFilterBox-Fix">
+      <div className="showOn">
          <h2 className="SelectNadpisCely">VYHLADAJ SVOJ KNIHU</h2>
        <div className="celyFilterBox">
-          
-         <select className="kategoria" defaultValue="Všetko" onChange={zistenieKategorie}>
+         <select className="kategoria"  onChange={zistenieKategorie}>
          <option value={"Vsetko"} >Všetko</option>
          <option value={"Školske"}>Školske</option>
          <option value={"Roman"}>Roman</option>

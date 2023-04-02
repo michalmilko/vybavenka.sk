@@ -10,9 +10,11 @@ const Menu = ({setKategapas}) => {
    const [AddActive, setAddActive]=useState();
    const [ImageChange, setImageChange]=useState(add);
    const [SelectActive, setSelectActive]=useState();
+   const [changer, setChange]=useState("showOff");
 
    const AddActiveFunk=()=>{
-      if(!AddActive && !SelectActive){
+     
+      if(!AddActive && changer==="showOff"){
       setAddActive(<AddBook/>);
       setImageChange(cancel);
    }else{
@@ -21,22 +23,30 @@ const Menu = ({setKategapas}) => {
    }
    }
    const SelectActiveFunk=()=>{
-      if(!SelectActive && !AddActive){
-      setSelectActive(<CelyFilter setKategapas={setKategapas}/>);
-   }else{
-      setSelectActive();
+     //zobrazenie Cely Filter kategorie
+     if(!AddActive){
+      setSelectActive( <CelyFilter setKategapas={setKategapas}/>);
+      //zobrazenie a vypnutie v css select kategorie
+      if(changer==="showOn"){
+         setChange("showOff");
+      }else{
+         setChange("showOn");
+      }
    }
    }
-
+   
    return(
       <div>
       <div>
          {AddActive}
-         {SelectActive}
+           <div className={changer}> 
+           {SelectActive}
+           </div>
+
       </div>
       <div className="downMenu">
-      <img className="imageSelectButton" src={select} onClick={()=>{SelectActiveFunk()}}/>
-      <img className="imageAddButton"src={ImageChange} onClick={()=>{AddActiveFunk()}} />
+      <img className="imageSelectButton" src={select} alt="selectFoto" onClick={()=>{SelectActiveFunk()}}/>
+      <img className="imageAddButton"src={ImageChange} alt="addFoto"onClick={()=>{AddActiveFunk()}} />
       </div>
       </div>
    )

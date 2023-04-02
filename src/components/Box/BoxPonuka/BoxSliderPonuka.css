@@ -2,11 +2,14 @@
  width: 100%;  
  display: flex;
  flex-direction: column;
- align-items: center;
+ align-items:center;
+ justify-content:center;
+ min-height: 470px;
+ height: 90%;
 }
 .nadpisKnihy{
    text-align: center;
-   margin: 8px 20px;
+   margin-bottom: 10px;
    color: white;
    height: 40px;
    text-decoration: none;
@@ -14,62 +17,63 @@
    background-color: #2b3035;
 }
 
+
+.categoriaKvalitaSlider{
+   width: 24px;
+}
+
+.ramImage{
+   width: 100%;
+   min-height: 300px;
+}
+
+
+.kategoriaKvalita{
+   display: flex;
+   justify-content:space-evenly;
+   width: 100%;
+   align-items:center;
+   font-size: 19px;
+   margin: 10px;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";  
+   
+}
+.imgKvalita{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 30%;
+
+}
+.imgKategoria{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   width: 26%;
+}
+.textKategoriaKvalita{
+   color: white;
+}
+/* Cena dole v inzerate */
+.cenaTextImage{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 35%;
+   margin-top: 20px;
+
+}
 .cenaSlider{
    font-size: 22px;
    background-color: #2b3035;
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-   margin-top: 20px;
-   margin-bottom: 20px;
+ 
    text-align: center;
    width: 100%;
+   font-size: 20px;
 }
-
-
-.ramPhoto{
-   text-align: center;
-   cursor:move;
-   width: 320px;
-   height: 200px;
-}
-.ramZoomPhoto{
-   display: block;
-   text-align: center;
-   cursor:move;
-   width: 380px;
-   height: 200px;
-   
-}
-.ramImage{
-   width: 100%;
-   max-height: 170px;
-   border-radius: 6px;
-}
-
-.kategoriaKvalita{
-   display: flex;
-   justify-content: space-evenly;
-   width: 100%;
-   align-items:start;
-   background-color: #2b3035;
-   font-size: 16px;
-   margin-top: 20px;
-   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";  
-   
-}
-.buttonBuy{
-   color: #2b3035;
-   width: 40%;
-   margin-left: 30%;
-   margin-right: 30%;
-   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
-   font-size: 16px;
-   padding: 9px 25px;
-   border-radius: 50px;
-   border: #495057 1px solid;
-   background-color: rgb(58, 221, 221);
-   cursor: pointer;
-}
-.buttonBuy:hover{
-   background-color: rgb(49, 148, 148);
-   color: white;
+.cenaImage{
+   width: 25px;
+   height: 25px;
 }

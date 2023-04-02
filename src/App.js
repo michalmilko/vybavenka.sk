@@ -3,7 +3,6 @@ import Inzerat from "./components/Inzerat";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head"
-import { toLower } from "lodash";
 
 const App = () =>{
 
@@ -23,14 +22,16 @@ const App = () =>{
     .then(dataaa=>setData(dataaa))
   }, []);
   
-  //Porovnanie kategoria.. v Menu
+  //Porovnanie kategorie v Menu ak su vsetky kategorie zapnute
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
+  //Search v head
    dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
  
-   
+   //Porovnanie kategorie v Menu ak su selektovane kategorie
   }else{
    dataa = data.filter(posun=>posun.Kategoria===katega);
+   //Search v head a selektovane kategorie
    dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
   }
 

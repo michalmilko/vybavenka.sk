@@ -9,7 +9,7 @@ const BoxPonuka = (props) =>{
          <div className="boxFull">
          <BoxMenuPonuka PresunProfil={props.PresunProfil}/>
          </div>
-         <div className="boxSlider">
+         <div className="boxPonukaSlider">
          <BoxSliderPonuka Dataa={props.Dataa} id={props.id} nazov={props.nazov} kategoria={props.kategoria} image={props.image} kvalita={props.kvalita} popis={props.popis}/>
          </div>
 
