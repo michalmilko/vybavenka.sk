@@ -1,3 +1,4 @@
+/* box */
 .boxSlider{
  width: 100%;  
  display: flex;
@@ -7,6 +8,7 @@
  min-height: 470px;
  height: 90%;
 }
+/* Nadpis */
 .nadpisKnihy{
    text-align: center;
    margin-bottom: 10px;
@@ -16,18 +18,13 @@
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
    background-color: #2b3035;
 }
-
-
-.categoriaKvalitaSlider{
-   width: 24px;
-}
-
+/* Fotka */
 .ramImage{
    width: 100%;
-   min-height: 300px;
+   min-height: 250px;
+   border-radius: 3px;
 }
-
-
+/* Kategoria a Kvalita */
 .kategoriaKvalita{
    display: flex;
    justify-content:space-evenly;
@@ -38,12 +35,14 @@
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";  
    
 }
+.categoriaKvalitaSlider{
+   width: 24px;
+}
 .imgKvalita{
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-width: 30%;
-
+width: 26%;
 }
 .imgKategoria{
    display: flex;
@@ -51,9 +50,7 @@ width: 30%;
    justify-content: space-evenly;
    width: 26%;
 }
-.textKategoriaKvalita{
-   color: white;
-}
+
 /* Cena dole v inzerate */
 .cenaTextImage{
    display: flex;
