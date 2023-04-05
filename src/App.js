@@ -17,7 +17,7 @@ const App = () =>{
 
   //Nacitanie z mysql kategoriu pre filter
  useEffect(() => {
-    fetch("http://www.vybavenka.sk/data")
+    fetch("http://www.vybavenka.sk:80/data")
     .then(response=>response.json())
     .then(dataaa=>setData(dataaa))
   }, []);

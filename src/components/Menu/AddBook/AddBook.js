@@ -7,9 +7,7 @@ const Add = ({setboolAddChange}) => {
   const [option1, setOption1] = useState('');
   const [option2, setOption2] = useState('');
   const [file, setFile] = useState(null);
-  const [nazov, setNazov] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+
 
   
 
@@ -24,7 +22,7 @@ const Add = ({setboolAddChange}) => {
  
     // Odoslanie dát na server
     try {
-      const response = await fetch('http://www.vybavenka.sk/data', {
+      const response = await fetch('http://vybavenka.sk/data', {
         method: 'POST',
         body: formData,
       });
@@ -90,22 +88,8 @@ const Add = ({setboolAddChange}) => {
         <input className="addCena"  type="number" min="0" required placeholder="Cena" value={text2} onChange={(event) => setText2(event.target.value)} />
       </label>
       <div className='menoPasswordEmail'>
-      <label>
-      <div className="nadpisAddUdaje">
-              <h1>OSOBNE UDAJE</h1>
-              </div>
-
-        <input className="addMeno"  type="text" min="0" required placeholder="Meno" value={nazov} onChange={(event) => setNazov(event.target.value)} />
-        
-        <input className="addPassword"  type="password" min="0" required placeholder="Heslo" value={password} onChange={(event) => setPassword(event.target.value)} />
-      </label>
       
-      <div>
-      <div className="addEmailDiv">
- 
-      <input className="addEmail"  type="email" min="0" required placeholder="Email" value={email} onChange={(event) => setEmail(event.target.value)} />
-      </div>
-      </div>
+     
       </div>
       </div>
       <div className='addButton'>
