@@ -48,6 +48,6 @@ app.post('/data', upload.single('Image'), (req, res) => {
   });
 });
 
-app.listen(3005, () => {
-  console.log('Server bude spustený na porte 3005!');
+app.listen(443, () => {
+  console.log('Server bude spustený na porte 443!');
 });

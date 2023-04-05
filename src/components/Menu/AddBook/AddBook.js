@@ -24,7 +24,7 @@ const Add = ({setboolAddChange}) => {
  
     // Odoslanie dát na server
     try {
-      const response = await fetch('http://localhost:3005/data', {
+      const response = await fetch('http://www.vybavenka.sk/data', {
         method: 'POST',
         body: formData,
       });
