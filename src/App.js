@@ -17,7 +17,7 @@ const App = () =>{
 
   //Nacitanie z mysql kategoriu pre filter
  useEffect(() => {
-    fetch("http://www.vybavenka.sk:80/data")
+    fetch("https://www.endpoint.vybavenka.sk/api/users")
     .then(response=>response.json())
     .then(dataaa=>setData(dataaa))
   }, []);
@@ -35,7 +35,6 @@ const App = () =>{
    dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
   }
 
-
   //Filter kategoria
   const FUnk=()=>  dataaa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis}=sup;
@@ -45,12 +44,13 @@ const App = () =>{
           id={id}
           prezivkaUser={MenoPriezvisko}
           nazov={Nazov}
-          image={'http://localhost:3005/images/'+Image}
+          image={'https://endpoint.vybavenka.sk/images/'+Image}
           kategoria={Kategoria}
           kvalita={Kvalita}
           popis={Popis}
           />
-        </div>
+       </div>
+        
       )}).reverse();
 //Zobrazenie na stranke
       return(
