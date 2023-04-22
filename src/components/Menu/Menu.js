@@ -9,6 +9,7 @@ import cancel from "../../images/cancel.png"
 const Menu = ({setKategapas}) => {
    const [AddActive, setAddActive]=useState();
    const [ImageChange, setImageChange]=useState(add);
+   const [ImageChangeKategoria, setImageChangeKategoria]=useState(select)
    const [SelectActive, setSelectActive]=useState();
    const [changer, setChange]=useState("showOff");
 
@@ -29,8 +30,11 @@ const Menu = ({setKategapas}) => {
       //zobrazenie a vypnutie v css select kategorie
       if(changer==="showOn"){
          setChange("showOff");
+         setImageChangeKategoria(select);
       }else{
          setChange("showOn");
+         setImageChangeKategoria(cancel);
+         
       }
    }
    }
@@ -45,7 +49,7 @@ const Menu = ({setKategapas}) => {
 
       </div>
       <div className="downMenu">
-      <img className="imageSelectButton" src={select} alt="selectFoto" onClick={()=>{SelectActiveFunk()}}/>
+      <img className="imageSelectButton" src={ImageChangeKategoria} alt="selectFoto" onClick={()=>{SelectActiveFunk()}}/>
       <img className="imageAddButton"src={ImageChange} alt="addFoto"onClick={()=>{AddActiveFunk()}} />
       </div>
       </div>

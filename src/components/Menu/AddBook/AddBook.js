@@ -11,64 +11,28 @@ const Add = () => {
 
   const handleSubmit = async (event) => {
    event.preventDefault();
- console.log(Image);
-   const user = { Nazov, Kategoria, Kvalita, Popis };
 
-  axios.post('https://endpoint.vybavenka.sk/api/users', user)
+  const formData = new FormData();
+formData.append('Nazov', Nazov);
+formData.append('Image', Image);
+formData.append('Kategoria', Kategoria);
+formData.append('Kvalita', Kvalita);
+formData.append('Popis', Popis);
+
+axios.post('https://endpoint.vybavenka.sk/api/users', formData)
   .then((res) => console.log(res.data))
   .catch((err) => console.log(err));
 
+
+ };
+
+ const Restartusestate = () =>{
   setText1('');
+  setFile(null);
   setOption1('');
   setOption2('');
   setText2('');
-  
- };
- 
-  //  try {
-  //    const response = await fetch('https://www.endpoint.vybavenka.sk/api/users', {
-  //      method: 'POST',
-  //      headers: { 'Content-Type': 'application/json' },
-  //      body: JSON.stringify(user)
-  //    });
-     
-  //    const data = await response.json();
-  //    console.log(data);
- 
-  //  } catch (error) {
-  //    console.log(error);
-  //  }
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-  
-//     const formData = new FormData();
-//     formData.append('Nazov', text1);
-//     formData.append('Kategoria', text2);
-//     formData.append('Kvalita', option1);
-//     formData.append('Cena', option2);
-//     formData.append('Image', file);
-  
-//     // Odoslanie dát na server
-//     try {
-//       const response = await fetch('https://www.endpoint.vybavenka.sk/api/users', {
-//         method: 'POST',
-//         body: formData,
-//       });
-  
-//       if (!response.ok) {
-//         throw new Error(`HTTP chyba ${response.status}`);
-//       }
-  
-//       const data = await response.json();
-//       console.log('Dáta boli úspešne vložené', data);
-//       setboolAddChange(false);
-//     } catch (error) {
-//       console.error(error);
-//       console.log('Vyskytla sa chyba', error);
-//       alert('Pri nahrávaní súboru sa vyskytla chyba. Skúste to prosím neskôr.');
-//     }
-//   };
-  
+ }
   return (
     <div className='fixedCeleCancel'>
     <div className="addCelyObsah">
@@ -94,7 +58,7 @@ const Add = () => {
           <option value={"Školske"}>Školske</option>
          <option value={"Roman"}>Roman</option>
          <option value={"Komedia"}>Komedia</option>
-         <option value={"Scifi"}>Scifi</option>
+         <option value={"Sci fi"}>Sci fi</option>
          <option value={"Rozpravka"}>Rozpravka</option>
         </select>
       </label>
@@ -125,7 +89,7 @@ const Add = () => {
       </label>
       </div>
       <div className='addButton'>
-      <button className="addSubmit" type="submit">Pridat Knihu</button>
+      <button className="addSubmit" onClick={()=>{Restartusestate()}} type="submit">Pridat Knihu</button>
       </div>
     </form>
     </div>

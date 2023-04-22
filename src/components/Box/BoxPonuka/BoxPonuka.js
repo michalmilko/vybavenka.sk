@@ -1,7 +1,6 @@
 import "./BoxPonuka.css"
 import BoxMenuPonuka from "./BoxMenuPonuka"
 import BoxSliderPonuka from "./BoxSliderPonuka"
-import ButtonBuyPonuka from "./ButtonBuyPonuka"
 
 const BoxPonuka = (props) =>{
    return(

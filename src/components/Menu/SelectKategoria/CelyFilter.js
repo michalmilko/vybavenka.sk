@@ -15,9 +15,9 @@ const CelyFilter = ({setKategapas}) => {
          <select className="kategoria"  onChange={zistenieKategorie}>
          <option value={"Vsetko"} >Všetko</option>
          <option value={"Školske"}>Školske</option>
-         <option value={"Roman"}>Roman</option>
+         <option value={"Román"}>Román</option>
          <option value={"Komedia"}>Komedia</option>
-         <option value={"Scifi"}>Scifi</option>
+         <option value={"Sci fi"}>Sci fi</option>
          <option value={"Rozpravka"}>Rozpravka</option>
          </select>
          </div>
