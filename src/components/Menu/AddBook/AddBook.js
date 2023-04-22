@@ -10,7 +10,7 @@ const Add = () => {
   const [Popis, setText2] = useState('');
 
   const handleSubmit = async (event) => {
-   event.preventDefault();
+  //  event.preventDefault();
 
   const formData = new FormData();
 formData.append('Nazov', Nazov);
@@ -23,16 +23,18 @@ axios.post('https://endpoint.vybavenka.sk/api/users', formData)
   .then((res) => console.log(res.data))
   .catch((err) => console.log(err));
 
+  
+    // setText1('');
+    // setFile(null);
+    // setOption1('');
+    // setOption2('');
+    // setText2('');
+ 
+  
 
  };
 
- const Restartusestate = () =>{
-  setText1('');
-  setFile(null);
-  setOption1('');
-  setOption2('');
-  setText2('');
- }
+
   return (
     <div className='fixedCeleCancel'>
     <div className="addCelyObsah">
@@ -56,7 +58,7 @@ axios.post('https://endpoint.vybavenka.sk/api/users', formData)
         <select className="addKategoria" value={Kategoria} required onChange={(event) => setOption1(event.target.value)}>
           <option value=""></option>
           <option value={"Školske"}>Školske</option>
-         <option value={"Roman"}>Roman</option>
+         <option value={"Roman"}>Román</option>
          <option value={"Komedia"}>Komedia</option>
          <option value={"Sci fi"}>Sci fi</option>
          <option value={"Rozpravka"}>Rozpravka</option>
@@ -89,7 +91,7 @@ axios.post('https://endpoint.vybavenka.sk/api/users', formData)
       </label>
       </div>
       <div className='addButton'>
-      <button className="addSubmit" onClick={()=>{Restartusestate()}} type="submit">Pridat Knihu</button>
+      <button className="addSubmit"  type="submit">Pridat Knihu</button>
       </div>
     </form>
     </div>

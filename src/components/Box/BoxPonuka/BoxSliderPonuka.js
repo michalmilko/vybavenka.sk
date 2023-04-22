@@ -1,5 +1,4 @@
 import "./BoxSliderPonuka.css"
-import { useState } from "react";
 import Categoria from "../../../images/select.png"
 import Kvalita from "../../../images/kvalita.png"
 import Euro from "../../../images/euro.png"
