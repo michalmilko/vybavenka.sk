@@ -1,0 +1,241 @@
+.fixedCeleCancel{
+   padding-top: 5px;
+   background-color: #2b3035;
+   height: 745px;
+   width: 100%;
+   position: fixed;
+   bottom: 75px;
+   text-align: center;
+   border-top: rgb(58, 221, 221) 1px solid;
+   
+   
+}
+.addCelyObsah{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+    align-items: flex-start;
+   color: white;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.addNadpisCely{
+   color: rgb(58, 221, 221);
+    margin-bottom: 12px;
+    margin-top: 10px;
+    
+}
+.addNadpisNazov{
+   text-align: center;
+}
+
+
+.addNazov{
+   width: 70%;
+   padding: 4px;
+   font-size: 18px;
+   text-align: center;
+   background-color: white;
+   margin-bottom: 20px;
+   margin-top: 5px;
+   border-radius: 30px;
+   height: 34px;
+   border: 3px transparent solid;
+}
+.addNazov:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   height: 34px;
+ 
+ }
+.addNazov:focus{
+   outline: none;
+   text-align: center;
+}
+.addKategoriaKvalita{
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content:space-evenly;
+   margin-bottom: 20px;
+}
+.addKategoria{
+   background-color: white;
+   padding: 4px;
+   margin-top: 5px;
+   cursor: pointer;
+   border-radius: 30px;
+   text-align: center;
+   width: 120px;
+   height: 35px;
+   border: 3px transparent solid;
+
+}
+.addKategoria:focus{
+   outline: none;
+   text-align: center;
+}
+.addKvalita{
+   background-color: white;
+   padding: 4px;
+   margin-top: 5px;
+   cursor: pointer;
+   border-radius: 30px;
+   text-align: center;
+   width: 120px;
+   height: 35px;
+   border: 3px transparent solid;
+
+}
+
+.addKvalita:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 2px;
+ }
+
+ .addKategoria:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 2px;
+ }
+
+.addKvalita:focus{
+   outline: none;
+   text-align: center;
+}
+option{
+   background-color: white;
+   
+}
+.addFileUpload{
+   text-align: center;
+   margin-bottom: 20px;
+   width: 100%;
+   border: none;
+
+}
+
+.addFile{
+   margin-top: 5px;  
+   border: none;
+
+}
+
+::-webkit-file-upload-button {
+   border-radius: 30px;
+   font-size: 12px;
+   padding: 7px;
+   background-color: rgb(58, 221, 221);
+   cursor: pointer;
+   border: 3px transparent solid;
+ }
+.addCenaPredaja{
+   text-align: center;
+   margin-bottom: 25px;
+}
+
+
+.addCena{
+   margin-top: 5px;
+   text-align: center;
+   background-color: white;
+   width: 70px;
+   padding: 7px;
+   border-radius: 30px;
+   border: 3px transparent solid;
+}
+
+
+.addCena:focus{
+   outline: none;
+}
+
+.addCena:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 7px;
+ }
+
+.addButton{
+   display: flex;
+   justify-content: center;
+   border: none;
+   margin-top: 20px;
+}
+
+.addSubmit{
+   color: #000000;
+   cursor: pointer;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+   font-size: 17px;
+   padding: 9px 25px;
+   border-radius: 50px;
+   border: none;
+   background-color: rgb(58, 221, 221);
+   text-align: center;
+   
+}
+.addSubmit:hover{
+   background-color: rgb(49, 148, 148);
+   color: white;
+}
+.imageCancel{
+cursor: pointer;
+}
+.menoPasswordEmail{
+   border-top: 1px solid rgb(58, 221, 221);
+   padding: 15px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+.nadpisAddUdaje{
+   font-size: 15px;
+   margin-bottom: 10px;
+   color: rgb(58, 221, 221);
+
+}
+.menoPriezvisko{
+   width: 80%;
+   font-size: 18px;
+   height: 35px;
+   text-align: center;
+   border-radius: 50px;
+   border: 1px solid transparent;
+   margin-top: 10px;
+
+}
+.Email{
+   width: 100%;
+   font-size: 18px;
+   height: 35px;
+   text-align: center;
+   border-radius: 50px;
+   border: 1px solid transparent;
+   margin: 20px 0px;
+}
+
+.Password{
+   width: 80%;
+   font-size: 18px;
+   height: 35px;
+   text-align: center;
+   border-radius: 50px;
+   border: 1px solid transparent;
+   margin: 10px;
+}
+.deletePassword{
+   border-top: 1px solid rgb(58, 221, 221);
+   margin-top: 5px;
+   padding-top: 20px;
+   width: 100%;
+}
+.menoPriezvisko:focus{
+   outline: none;  
+}
+.Email:focus{
+   outline: none;  
+}
+.Password:focus{
+   outline: none;  
+}
