@@ -1,7 +1,7 @@
 .fixedCeleCancel{
    padding-top: 5px;
    background-color: #2b3035;
-   height: 480px;
+   height: 750px;
    width: 100%;
    position: fixed;
    bottom: 75px;
@@ -179,15 +179,14 @@ option{
 cursor: pointer;
 }
 .menoPasswordEmail{
-   border: 1px solid rgb(58, 221, 221);
-   padding: 10px;
-   margin-top: 12px;
+   border-top: 1px solid rgb(58, 221, 221);
+   padding: 15px;
    display: flex;
    flex-direction: column;
    text-align: center;
-   justify-content: center;
-   /* align-items: center; */
-   width: 90%;
+   justify-content: space-between;
+   align-items: center;
+   
 }
 .nadpisAddUdaje{
    font-size: 15px;
@@ -195,40 +194,40 @@ cursor: pointer;
    color: rgb(58, 221, 221);
 
 }
-.addMeno{
-   width: 40%;
-   font-size: 18px;
-   height: 35px;
-   text-align: center;
-   border-radius: 50px;
-   margin-right: 8px;
-   border: 1px solid transparent;
-}
-.addPassword{
-   width: 40%;
-   font-size: 18px;
-   height: 35px;
-   text-align: center;
-   border-radius: 50px;
-   margin-left: 8px;
-   border: 1px solid transparent;
-   
-}
-.addEmail{
+.menoPriezvisko{
    width: 80%;
    font-size: 18px;
    height: 35px;
    text-align: center;
    border-radius: 50px;
    border: 1px solid transparent;
-   margin-top: 20px;
+   margin-top: 10px;
+
 }
-.addMeno:focus{
+.Email{
+   width: 100%;
+   font-size: 18px;
+   height: 35px;
+   text-align: center;
+   border-radius: 50px;
+   border: 1px solid transparent;
+   margin: 20px 0px;
+}
+.Password{
+   width: 80%;
+   font-size: 18px;
+   height: 35px;
+   text-align: center;
+   border-radius: 50px;
+   border: 1px solid transparent;
+   margin: 10px;
+}
+.menoPriezvisko:focus{
    outline: none;  
 }
-.addPassword:focus{
+.Email:focus{
    outline: none;  
 }
-.addEmail:focus{
+.Password:focus{
    outline: none;  
 }
