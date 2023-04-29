@@ -1,8 +1,8 @@
 import "./App.css";
-import Inzerat from "./components/Inzerat";
+import Box from "./components/Box/Box";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
-import Head from "./components/Head"
+import Head from "./components/Head/Head";
 
 const App = () =>{
 
@@ -35,12 +35,12 @@ const App = () =>{
    dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
   }
 
-  //Filter kategoria
-  const FUnk=()=>  dataaa.map((sup)=>{   
+  //Zobrazenie obsahu z API
+  const Obsah=()=>  dataaa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis, Email}=sup;
       return(
         <div key={id} className="appCele">
-          <Inzerat Data={data}
+          <Box Data={data}
           id={id}
           prezivkaUser={MenoPriezvisko}
           nazov={Nazov}
@@ -51,14 +51,15 @@ const App = () =>{
           userEmail={Email}
           />
        </div>
-        
+    //Zoradovat obsah opacne
       )}).reverse();
-//Zobrazenie na stranke
+
+    //Zobrazenie na stranke
       return(
         <div className="CelyHead"> 
           <Head setSearch={setSearch}/>
           <div className={"CeleBody"}>
-          {FUnk()}
+          {Obsah()}
           </div>
           <Menu setKategapas={setKategapas}/>
         </div>

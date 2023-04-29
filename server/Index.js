@@ -7,10 +7,10 @@ const app = express();
 const port = 3000;
 
 const connection = mysql.createConnection({
-  host: 'mysql80.r4.websupport.sk',
-  user: 'michalmilkoo',
-  password: 'Alfa147.',
-  database: 'bookvybavenka'
+  host: 'localhost',
+  user: 'vybavenk_vybavenka',
+  password: 'WrZ2BA7HTw5*',
+  database: 'vybavenk_book'
 });
 
 connection.connect((err) => {

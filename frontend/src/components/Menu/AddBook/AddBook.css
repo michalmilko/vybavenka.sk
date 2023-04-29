@@ -1,7 +1,7 @@
 .fixedCeleCancel{
    padding-top: 5px;
    background-color: #2b3035;
-   height: 745px;
+   height: 700px;
    width: 100%;
    position: fixed;
    bottom: 75px;
@@ -9,6 +9,10 @@
    border-top: rgb(58, 221, 221) 1px solid;
    
    
+}
+.ok{
+   border: 2px red solid;
+   cursor: pointer;
 }
 .addCelyObsah{
    display: flex;
@@ -36,7 +40,7 @@
    font-size: 18px;
    text-align: center;
    background-color: white;
-   margin-bottom: 20px;
+   margin-bottom: 15px;
    margin-top: 5px;
    border-radius: 30px;
    height: 34px;
@@ -107,7 +111,7 @@ option{
 }
 .addFileUpload{
    text-align: center;
-   margin-bottom: 20px;
+   margin-bottom: 15px;
    width: 100%;
    border: none;
 
@@ -129,12 +133,12 @@ option{
  }
 .addCenaPredaja{
    text-align: center;
-   margin-bottom: 25px;
+   margin-bottom: 15px;
 }
 
 
 .addCena{
-   margin-top: 5px;
+   margin-top: 8px;
    text-align: center;
    background-color: white;
    width: 70px;
@@ -181,13 +185,12 @@ cursor: pointer;
 }
 .menoPasswordEmail{
    border-top: 1px solid rgb(58, 221, 221);
-   padding: 15px;
+   padding: 5px;
    display: flex;
    flex-direction: column;
    text-align: center;
    justify-content: space-between;
    align-items: center;
-   
 }
 .nadpisAddUdaje{
    font-size: 15px;
@@ -203,8 +206,13 @@ cursor: pointer;
    border-radius: 50px;
    border: 1px solid transparent;
    margin-top: 10px;
+   padding: 2px;
 
 }
+.menoPriezvisko:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 0px;
+ }
 .Email{
    width: 100%;
    font-size: 18px;
@@ -213,7 +221,12 @@ cursor: pointer;
    border-radius: 50px;
    border: 1px solid transparent;
    margin: 20px 0px;
+   padding: 2px;
 }
+.Email:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 0px;
+ }
 
 .Password{
    width: 80%;
@@ -223,11 +236,16 @@ cursor: pointer;
    border-radius: 50px;
    border: 1px solid transparent;
    margin: 10px;
+   padding: 2px;
 }
+.Password:valid {
+   border: rgb(58, 221, 221) 3px solid;
+   padding: 0px;
+ }
 .deletePassword{
    border-top: 1px solid rgb(58, 221, 221);
    margin-top: 5px;
-   padding-top: 20px;
+   padding-top: 5px;
    width: 100%;
 }
 .menoPriezvisko:focus{

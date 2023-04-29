@@ -5,12 +5,10 @@ const CelyFilter = ({setKategapas}) => {
   //z kategorie zistenie filter
    const zistenieKategorie=(event)=>{
       setKategapas(event.target.value);
-     
-     
    }
    return(
       <div className="showOn">
-         <h2 className="SelectNadpisCely">VYHLADAJ SVOJ KNIHU</h2>
+         <h2 className="SelectNadpisCely">VYHLADAJ SVOJU KNIHU</h2>
        <div className="celyFilterBox">
          <select className="kategoria"  onChange={zistenieKategorie}>
          <option value={"Vsetko"} >Všetko</option>

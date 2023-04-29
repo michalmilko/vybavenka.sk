@@ -1,44 +1,32 @@
-.box{
-   margin: 20px;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   align-items: center;
-   padding: 5px;
-   border-radius: 5px;
-   border: #495057 2px solid;
-   width: 450px;
-}
-@media only screen and (max-width: 700px)
-{
-.box{
- margin: 0;
- margin-top: 20px;
- margin-bottom: 20px;
- width: 400px;
-}
-}
-@media only screen and (max-width: 600px)
-{
-.box{
- margin: 0;
- margin-top: 20px;
- margin-bottom: 20px;
- width: 375px;
-}
-}
-@media only screen and (max-width: 500px)
-{
-.box{
- margin: 0;
- margin-top: 20px;
- margin-bottom: 20px;
- width: 350px;
-}
-}
-.boxFull{
-   width: 100%;
+.boxProfil{
    display: flex;
    flex-direction: column;
-   flex-wrap: wrap;
+   justify-content:space-between;
+   width: 95%;
+   /* border: 1px solid red; */
+   height: 100%;
+}
+.boxFullProfil{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   /* border: 1px solid red; */
+   height: 70%;
+}
+.boxDeleteProfil{
+   display: flex;
+   justify-content: center;
+   /* border: 1px solid red; */
+   margin-bottom: 20px;
+}
+.boxDeleteButton{
+   color: #000000;
+   cursor: pointer;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+   font-size: 17px;
+   padding: 9px 25px;
+   border-radius: 50px;
+   border: none;
+   background-color: rgb(58, 221, 221);
+   text-align: center;
 }
