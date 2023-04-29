@@ -1,8 +1,7 @@
-<IfModule mod_headers.c>
-Header set Access-Control-Allow-Origin "*"
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# Options +FollowSymlinks
-# Options -Indexes
-</IfModule>
+
+
+      <IfModule mod_headers.c>
+         RewriteEngine On
+         RewriteCond %{HTTPS} off
+         RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+     </IfModule>
