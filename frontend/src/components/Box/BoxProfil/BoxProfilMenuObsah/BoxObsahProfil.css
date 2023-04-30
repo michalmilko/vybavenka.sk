@@ -1,9 +1,9 @@
 /* Obsah na Profile */
 .boxObsahProfil{
    text-align: center;
-   font-size: 25px;
+   font-size: 18px;
    border: #495057 2px solid;
    margin: 30px;
-   padding: 10px;
-   border-radius: 6px;
+   padding: 7px;
+   border-radius: 8px;
 }
