@@ -49,6 +49,7 @@ const Menu = ({setKategapas}) => {
            {AddActive}
            <div className={changer}> 
            {SelectActive}
+           
            </div>
        </div>
        {/* Dole ikony menu */}

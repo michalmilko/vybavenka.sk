@@ -1,0 +1,26 @@
+.loadingAll{
+   padding-top: 5px;
+   background: rgba(0,0,0,0.85);
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   top: 0;
+   text-align: center;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+}
+.logoV{
+width: 150px;
+height: 120px;
+}
+
+.logoNacitavam{
+   color: #3adddd;
+   font-size: 20px;
+   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}

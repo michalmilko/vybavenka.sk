@@ -6,6 +6,8 @@ import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-              <App />
+  <div className='indexCely'>              <App />
+  </div>
+
             );
 

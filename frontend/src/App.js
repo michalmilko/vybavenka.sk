@@ -3,6 +3,7 @@ import Box from "./components/Box/Box";
 import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head/Head";
+import Loading from "./components/Loading";
 
 const App = () =>{
 
@@ -10,16 +11,21 @@ const App = () =>{
   let dataaa;
 
   //useState - search
-  const [textSearch, setSearch]=useState("");
+  const [textSearch, setSearch] = useState("");
   //useState - nacitanie aka kategoria je vybrata
-  const[katega,setKategapas]=useState("Vsetko");
+  const [katega,setKategapas] = useState("Vsetko");
   const [data, setData] = useState([]);
+  //Nacitovanie spustenie
+  const [loadingicon, setLoadingicon] = useState(<Loading/>);
+ 
+
 
   //Nacitanie z mysql kategoriu pre filter
- useEffect(() => {
+ useEffect(() => {  
     fetch("https://www.endpoint.vybavenka.sk/api/users")
     .then(response=>response.json())
     .then(dataaa=>setData(dataaa))
+    setLoadingicon();
   }, []);
   
   //Porovnanie kategorie v Menu ak su vsetky kategorie zapnute
@@ -50,18 +56,27 @@ const App = () =>{
           popis={Popis}
           userEmail={Email}
           />
+          
        </div>
+       
     //Zoradovat obsah opacne
       )}).reverse();
-
+    
     //Zobrazenie na stranke
       return(
+  
+        <div className="Loadingg">
+
         <div className="CelyHead"> 
           <Head setSearch={setSearch}/>
+            </div>
+
           <div className={"CeleBody"}>
           {Obsah()}
           </div>
           <Menu setKategapas={setKategapas}/>
+          
+          {loadingicon}
         </div>
       )
 }

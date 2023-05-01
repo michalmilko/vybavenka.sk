@@ -31,7 +31,7 @@ cursor: pointer;
    margin-right: 9px;
    text-align: center;
    font-size: 15px;
-   max-width: 240px;
+   max-width: 270px;
 }
 @media only screen and (max-width: 450px)
 {
@@ -41,6 +41,7 @@ cursor: pointer;
    max-width: 200px;
 }
 }
+
 .HeadSearch:focus{
    outline: none;
 }
