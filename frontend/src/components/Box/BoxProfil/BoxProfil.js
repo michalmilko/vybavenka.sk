@@ -1,40 +1,10 @@
 import "./BoxProfil.css"
 import BoxMenuProfil from "./BoxProfilMenuObsah/BoxMenuProfil"
 import BoxObsahProfil from "./BoxProfilMenuObsah/BoxObsahProfil"
-import axios from 'axios';
-import { useState } from "react";
+import DeleteBox from "./BoxProfilMenuObsah/DeleteBox";
 
 const BoxProfil = (props) => {
-//useState ukladanie hodnot.. id, heslo z id a input heslo
-  const [id, setId] = useState(props.id); 
-  const [dataPass, setDataPass] = useState("");
-  const [inputPassword, setinputPassword]= useState("");
-  //Zistenie podla api endpoint heslo podla id
-    fetch("https://endpoint.vybavenka.sk/api/users")
-    .then(zistit=>zistit.json())
-    .then(data=>data.filter(potvrdenie=>potvrdenie.id===props.id))
-    .then(dataa=>console.log(setDataPass(dataa[0].deletePassword)));
 
-
-    //Funkcia na spustenie mazania inzeratu.. a kontrola.. hesla
-   const buttonDelete = async (event) => {
-    event.preventDefault();
-    //Zistovanie hesla
-    if(dataPass===inputPassword){
-     try {
-       console.log(id);
-       await axios.delete(`https://endpoint.vybavenka.sk/api/users/${id}`, {
-             data: {
-               id: id
-                 }
-            });
-       setId();
-       window.location.reload();
-     } catch (error) {
-       console.log(error);
-     }
-   };
-  }
    return (
      <div className="boxProfil">
        {/* Zobrazenie v Menu inzeratu Profil */}
@@ -45,18 +15,10 @@ const BoxProfil = (props) => {
        <div className="boxFullProfil">
          <BoxObsahProfil prezivkaUser={props.prezivkaUser} userEmail={props.userEmail} />
        </div>
-       <form onSubmit={buttonDelete}>     
-         <div className="boxProfilDeleteFull">
-           <h4 className="nadpisDeleteHeslo">Vymazat inzerat</h4>
-       <div className="divdeleteInput">      
-        <input className="deleteInput" type="password" placeholder="Vaše Heslo"  onChange={(event) => setinputPassword(event.target.value)}/>
-        </div>
-       {/* Vymazanie inzeratu v Profile */}
-       <div className="boxDeleteProfil">
-         <button className="boxDeleteButton" type="submit">Vymazať</button>
+       {/* Delete inzerat */}
+       <div>
+     <DeleteBox id={props.id}/>
        </div>
-     </div>
-     </form>
      </div>
 
    );

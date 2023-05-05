@@ -17,8 +17,6 @@
 
 }
 
-
-/* .Loading{
-   color: wheat;
-   width: 100vh;
-} */
+.mazanieLoading{
+   display: none;
+}

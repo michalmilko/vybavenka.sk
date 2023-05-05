@@ -3,56 +3,11 @@
    flex-direction: column;
    justify-content:space-between;
    width: 95%;
-   /* border: 1px solid red; */
    height: 100%;
 }
 .boxFullProfil{
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
-   /* border: 1px solid red; */
    height: 70%;
-}
-.boxProfilDeleteFull{
-      /* border: 1px solid red; */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-}
-.boxDeleteProfil{
-   margin-bottom: 20px;
-}
-.nadpisDeleteHeslo{
-   margin-bottom: 10px;
-   color: rgb(58, 221, 221);
-}
-.boxDeleteButton{
-   color: #000000;
-   cursor: pointer;
-   font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
-   font-size: 18px;
-   padding: 6px 20px;
-   border-radius: 50px;
-   border: none;
-   background-color: rgb(58, 221, 221);
-   font-weight: 400;
-
-}
-.boxDeleteButton:hover{
-   background-color: rgb(221, 58, 66);
-   color: white;
-}
-.divdeleteInput{
-   color: black;
-   margin-bottom: 30px;
-}
-.deleteInput{
-   padding: 10px;
-   border-radius: 30px;
-   text-align: center;
-}
-.deleteInput:focus{
-   outline: none;
-   text-align: center;
 }

@@ -6,7 +6,7 @@ import select from "../../images/select.png"
 import add from "../../images/add.png"
 import cancel from "../../images/cancel.png"
 
-const Menu = ({setKategapas}) => {
+const Menu = ({setLoadingicon, setKategapas}) => {
 
    const [AddActive, setAddActive]=useState();
    const [ImageChange, setImageChange]=useState(add);
@@ -18,7 +18,7 @@ const Menu = ({setKategapas}) => {
    const AddActiveFunk=()=>{
       //Zobrazenie Add stranky
       if(!AddActive && changer==="showOff"){
-      setAddActive(<AddBook/>);
+      setAddActive(<AddBook setLoadingicon={setLoadingicon}/>);
       setImageChange(cancel);
       //Vypnutie Add stranky
    }else{

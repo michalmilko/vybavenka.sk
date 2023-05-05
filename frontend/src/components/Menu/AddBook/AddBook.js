@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./AddBook.css";
+import Loading from "../../Loading"
 
-const Add = () => {
+const Add = ({setLoadingicon}) => {
   //UKLADANIE DAT Z INPUT
   const [MenoPriezvisko, setMenoPriezvisko] = useState('');
   const [Nazov, setNazov] = useState('');
@@ -14,6 +15,7 @@ const Add = () => {
   const [deletePassword, setPassword]= useState ("");
 
   const handleSubmit = async (event) => {
+   
    event.preventDefault();
  
   //VYTVORENIE OBJEKTU DAT
@@ -80,6 +82,8 @@ axios.post('https://endpoint.vybavenka.sk/api/users', formData)
         </select>
       </label>
       </div>
+      {/* Nahrat foto */}
+
       <div className='addFileUpload'>
       <label>
         <h5>Nahrať knihu</h5>
@@ -110,7 +114,7 @@ axios.post('https://endpoint.vybavenka.sk/api/users', formData)
       </div>
          {/* Button na poslanie inzeratu */}
       <div className='addButton'>
-      <button className="addSubmit" type="submit">Pridat Knihu</button>
+      <button className="addSubmit" onClick={()=>{setLoadingicon(<Loading/>)}} type="submit">Pridat Knihu</button>
       </div>
     </form>
     </div>

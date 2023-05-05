@@ -10,23 +10,22 @@ const App = () =>{
   let dataa;
   let dataaa;
 
+  //Nacitovanie spustenie
+  const [loadingicon, setLoadingicon] = useState(<Loading/>);
   //useState - search
   const [textSearch, setSearch] = useState("");
   //useState - nacitanie aka kategoria je vybrata
   const [katega,setKategapas] = useState("Vsetko");
   const [data, setData] = useState([]);
-  //Nacitovanie spustenie
-  const [loadingicon, setLoadingicon] = useState(<Loading/>);
  
-
-
   //Nacitanie z mysql kategoriu pre filter
- useEffect(() => {  
-    fetch("https://www.endpoint.vybavenka.sk/api/users")
-    .then(response=>response.json())
-    .then(dataaa=>setData(dataaa))
-    setLoadingicon();
-  }, []);
+  useEffect(() => {  
+      fetch("https://www.endpoint.vybavenka.sk/api/users")
+      .then(response=>response.json())
+      .then(dataaa=>setData(dataaa))
+     
+      
+    }, []);
   
   //Porovnanie kategorie v Menu ak su vsetky kategorie zapnute
   if(katega==="Vsetko"){
@@ -42,8 +41,10 @@ const App = () =>{
   }
 
   //Zobrazenie obsahu z API
+  
   const Obsah=()=>  dataaa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis, Email}=sup;
+   
       return(
         <div key={id} className="appCele">
           <Box Data={data}
@@ -56,28 +57,35 @@ const App = () =>{
           popis={Popis}
           userEmail={Email}
           />
-          
+          <div className="mazanieLoading">
+          { setInterval(() => {
+            setLoadingicon();
+             }, 0)}
+             </div>
        </div>
        
     //Zoradovat obsah opacne
       )}).reverse();
-    
+      
     //Zobrazenie na stranke
       return(
   
-        <div className="Loadingg">
-
+      <div>
+          
         <div className="CelyHead"> 
           <Head setSearch={setSearch}/>
-            </div>
-
-          <div className={"CeleBody"}>
-          {Obsah()}
-          </div>
-          <Menu setKategapas={setKategapas}/>
-          
-          {loadingicon}
         </div>
+
+        <div className={"CeleBody"}>
+          {Obsah()}
+        </div>
+
+         <div>
+          <Menu setKategapas={setKategapas} setLoadingicon={setLoadingicon}/>
+         </div>
+
+          {loadingicon}
+       </div>
       )
 }
 export default App

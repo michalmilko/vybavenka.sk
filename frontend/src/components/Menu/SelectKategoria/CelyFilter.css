@@ -11,7 +11,6 @@
    text-align: center;
    border-top: rgb(58, 221, 221) 1px solid;
 }
-
 .celyFilterBox{
    display: flex;
    flex-direction: row;
@@ -24,9 +23,6 @@
     margin-top: 10px;
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-
-
-
 .kategoria{
    padding: 9px;
    font-size: 17px;
@@ -35,6 +31,7 @@
    width: 30%;
    text-align: center;
    color: rgb(114, 112, 112);
+   cursor: pointer;
 }
 .kategoria:focus{
    outline: none;

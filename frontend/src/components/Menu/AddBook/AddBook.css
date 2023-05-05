@@ -1,15 +1,18 @@
 .fixedCeleCancel{
    padding-top: 5px;
    background-color: #2b3035;
-   height: 700px;
+   height: 75%;
    width: 100%;
    position: fixed;
    bottom: 75px;
    text-align: center;
    border-top: rgb(58, 221, 221) 1px solid;
-   border: red solid 1px;
-   
-   
+}
+@media only screen and (max-width: 600px)
+{
+.fixedCeleCancel{
+   height: 580px;
+}
 }
 .ok{
    border: 2px red solid;
@@ -28,12 +31,17 @@
    color: rgb(58, 221, 221);
     margin-bottom: 12px;
     margin-top: 10px;
-    
+}
+@media only screen and (max-width: 600px)
+{
+.addNadpisCely{
+   margin-top: 0px;
+   margin-bottom: 3px;
+}
 }
 .addNadpisNazov{
    text-align: center;
 }
-
 
 .addNazov{
    width: 70%;
@@ -47,11 +55,24 @@
    height: 34px;
    border: 3px transparent solid;
 }
+@media only screen and (max-width: 600px)
+{
+.addNazov{
+   margin-top: 5px;
+   margin-bottom: 5px;
+   height: 25px;
+}
+}
 .addNazov:valid {
    border: rgb(58, 221, 221) 3px solid;
    height: 34px;
- 
  }
+ @media only screen and (max-width: 600px)
+{
+.addNazov:valid{
+   height: 25px;
+}
+}
 .addNazov:focus{
    outline: none;
    text-align: center;
@@ -63,6 +84,13 @@
    justify-content:space-evenly;
    margin-bottom: 20px;
 }
+@media only screen and (max-width: 600px)
+{
+.addKategoriaKvalita{
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+}
 .addKategoria{
    background-color: white;
    padding: 4px;
@@ -73,7 +101,12 @@
    width: 120px;
    height: 35px;
    border: 3px transparent solid;
-
+}
+@media only screen and (max-width: 600px)
+{
+.addKategoria{
+   height: 30px;
+}
 }
 .addKategoria:focus{
    outline: none;
@@ -89,9 +122,13 @@
    width: 120px;
    height: 35px;
    border: 3px transparent solid;
-
 }
-
+@media only screen and (max-width: 600px)
+{
+.addKvalita{
+   height: 30px;
+}
+}
 .addKvalita:valid {
    border: rgb(58, 221, 221) 3px solid;
    padding: 2px;
@@ -117,11 +154,16 @@ option{
    border: none;
 
 }
-
+@media only screen and (max-width: 600px)
+{
+.addFileUpload{
+   margin-top: 10px;
+   margin-bottom: 7px;
+}
+}
 .addFile{
    margin-top: 5px;  
    border: none;
-
 }
 
 ::-webkit-file-upload-button {
@@ -136,7 +178,13 @@ option{
    text-align: center;
    margin-bottom: 15px;
 }
-
+@media only screen and (max-width: 600px)
+{
+.addCenaPredaja{
+   margin-top: 5px;
+   margin-bottom: 10px;
+}
+}
 
 .addCena{
    margin-top: 8px;
@@ -147,12 +195,9 @@ option{
    border-radius: 30px;
    border: 3px transparent solid;
 }
-
-
 .addCena:focus{
    outline: none;
 }
-
 .addCena:valid {
    border: rgb(58, 221, 221) 3px solid;
    padding: 7px;
@@ -164,7 +209,13 @@ option{
    border: none;
    margin-top: 20px;
 }
-
+@media only screen and (max-width: 600px)
+{
+.addButton{
+   margin-top: 0px;
+   margin-bottom: 10px;
+}
+}
 .addSubmit{
    color: #000000;
    cursor: pointer;
@@ -199,6 +250,13 @@ cursor: pointer;
    color: rgb(58, 221, 221);
 
 }
+@media only screen and (max-width: 600px)
+{
+.nadpisAddUdaje{
+   margin-top: 5px;
+   margin-bottom: 0px;
+}
+}
 .menoPriezvisko{
    width: 80%;
    font-size: 18px;
@@ -208,7 +266,14 @@ cursor: pointer;
    border: 1px solid transparent;
    margin-top: 10px;
    padding: 2px;
-
+}
+@media only screen and (max-width: 600px)
+{
+.menoPriezvisko{
+   margin-top: 7px;
+   margin-bottom: 10px;
+   height: 25px;
+}
 }
 .menoPriezvisko:valid {
    border: rgb(58, 221, 221) 3px solid;
@@ -224,6 +289,14 @@ cursor: pointer;
    margin: 20px 0px;
    padding: 2px;
 }
+@media only screen and (max-width: 600px)
+{
+.Email{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   height: 25px;
+}
+}
 .Email:valid {
    border: rgb(58, 221, 221) 3px solid;
    padding: 0px;
@@ -238,6 +311,14 @@ cursor: pointer;
    border: 1px solid transparent;
    margin: 10px;
    padding: 2px;
+}
+@media only screen and (max-width: 600px)
+{
+.Password{
+   margin-top: 10px;
+   margin-bottom: 15px;
+   height: 30px;
+}
 }
 .Password:valid {
    border: rgb(58, 221, 221) 3px solid;

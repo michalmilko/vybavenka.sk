@@ -1,3 +1,4 @@
+
 /* NADPIS VYBAVENKA */
 .NadpisLogo{
    color: rgb(58, 221, 221);
@@ -24,6 +25,7 @@ cursor: pointer;
    flex-direction: row;
    justify-content: space-evenly;
    flex-wrap: wrap;
+   height: 55px;
 }
 .HeadSearch{
    border-radius: 20px;
@@ -31,12 +33,14 @@ cursor: pointer;
    margin-right: 9px;
    text-align: center;
    font-size: 15px;
-   max-width: 270px;
+   width: 250px;
+   border: none;
+   padding-left: 10px;
 }
-@media only screen and (max-width: 450px)
+@media only screen and (max-width: 500px)
 {
 .HeadSearch{
-   margin: 5px 0px;
+   margin: 10px 0px;
    margin-right: 3px;
    max-width: 200px;
 }

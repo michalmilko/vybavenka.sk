@@ -7,6 +7,7 @@
    color: #fff;
    border: #495057 2px solid;
    background-color: #2b3035;
+   border-radius: 8px;
    margin: 15px;
    display: flex;
    flex-wrap: wrap;
@@ -24,7 +25,7 @@
  margin: 0;
  margin-top: 20px;
  margin-bottom: 20px;
- width: 400px;
+ width: 425;
 }
 }
 @media only screen and (max-width: 600px)
@@ -33,7 +34,7 @@
  margin: 0;
  margin-top: 20px;
  margin-bottom: 20px;
- width: 375px;
+ width: 400px;
 }
 }
 @media only screen and (max-width: 500px)
@@ -42,7 +43,7 @@
  margin: 0;
  margin-top: 20px;
  margin-bottom: 20px;
- width: 350px;
+ width: 375px;
 }
 }
 
