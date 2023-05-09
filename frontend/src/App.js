@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head/Head";
 import Loading from "./components/Loading";
+import LoginRegistracia from "./components/Head/PrihlasenieRegistracia/LoginRegistracia";
 
 const App = () =>{
 
@@ -17,16 +18,19 @@ const App = () =>{
   //useState - nacitanie aka kategoria je vybrata
   const [katega,setKategapas] = useState("Vsetko");
   const [data, setData] = useState([]);
+  //Klik na ProfilIconMenu true/false
+  const [showTableLogin, setShowTableLogin] = useState();
+  const [headLoginIcon, setHeadLoginIcon] = useState(false);
+
+  const [switchRegLog, setSwitchRegLog] = useState("RegLogFalse");
  
   //Nacitanie z mysql kategoriu pre filter
   useEffect(() => {  
       fetch("https://www.endpoint.vybavenka.sk/api/users")
       .then(response=>response.json())
       .then(dataaa=>setData(dataaa))
-     
-      
     }, []);
-  
+
   //Porovnanie kategorie v Menu ak su vsetky kategorie zapnute
   if(katega==="Vsetko"){
    dataa  = data.filter(posun=>posun.Kategoria);
@@ -39,9 +43,14 @@ const App = () =>{
    //Search v head a selektovane kategorie
    dataaa = dataa.filter(posunn=>posunn.Nazov.toUpperCase().includes(textSearch.toUpperCase()));
   }
+//Zapnutie Prihlasenie/Registraciu
+if(headLoginIcon){ 
+  setShowTableLogin(<LoginRegistracia setSwitchRegLog={setSwitchRegLog} />);
+  setHeadLoginIcon(false);
+  setSwitchRegLog("RegLogTrue");
+   }
 
   //Zobrazenie obsahu z API
-  
   const Obsah=()=>  dataaa.map((sup)=>{   
     const{id,MenoPriezvisko,Nazov,Image,Kategoria,Kvalita,Popis, Email}=sup;
    
@@ -69,22 +78,23 @@ const App = () =>{
       
     //Zobrazenie na stranke
       return(
-  
       <div>
-          
         <div className="CelyHead"> 
-          <Head setSearch={setSearch}/>
+          <Head setSearch={setSearch} setHeadLoginIcon={setHeadLoginIcon}/>
         </div>
-
         <div className={"CeleBody"}>
-          {Obsah()}
+           {Obsah()}
         </div>
-
          <div>
-          <Menu setKategapas={setKategapas} setLoadingicon={setLoadingicon}/>
+            <Menu setKategapas={setKategapas} setLoadingicon={setLoadingicon} />
          </div>
+                    <div className={switchRegLog}>
+                    {showTableLogin}
+                    </div>
+              <div>
+             {loadingicon}
+             </div>
 
-          {loadingicon}
        </div>
       )
 }

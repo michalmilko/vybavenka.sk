@@ -20,3 +20,9 @@
 .mazanieLoading{
    display: none;
 }
+.RegLogTrue{
+display: flex;
+}
+.RegLogFalse{
+   display: none;
+}
