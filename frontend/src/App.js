@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head/Head";
 import Loading from "./components/Loading";
-import LoginRegistracia from "./components/Head/PrihlasenieRegistracia/LoginRegistracia";
+import LoginRegister from "./components/Head/LoginRegister/LoginRegister";
 
 const App = () =>{
 
@@ -45,7 +45,7 @@ const App = () =>{
   }
 //Zapnutie Prihlasenie/Registraciu
 if(headLoginIcon){ 
-  setShowTableLogin(<LoginRegistracia setSwitchRegLog={setSwitchRegLog} />);
+  setShowTableLogin(<LoginRegister setSwitchRegLog={setSwitchRegLog} />);
   setHeadLoginIcon(false);
   setSwitchRegLog("RegLogTrue");
    }

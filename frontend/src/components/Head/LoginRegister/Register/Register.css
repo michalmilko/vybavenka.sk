@@ -1,10 +1,11 @@
-.boxMenu{
+.RegisterWindow{
    display: flex;
    flex-direction: row;
-   height: 40px;
-   margin-bottom: 10px; 
+   width:  420px;
+   height: 50px;
+   margin-top: 2px;
 }
-.boxMenu p{
+.RegisterWindow p{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -15,18 +16,19 @@
    text-decoration: none;
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-.boxPonukaPonuka{
+.RegisterLogin{
+   border-bottom: #495057 2px solid;
+   border-left: #2b3035 2px solid;
+   border-top: #2b3035 2px solid;
+   border-radius: 0px 0px 0px 0px;
+   color: white;
+   cursor: pointer;
+}
+.RegisterRegister{
    border-right: #495057 2px solid;
    border-left: #495057 2px solid;
    border-top: #495057 2px solid;
    border-bottom: #2b3035 2px solid;
    border-radius: 6px 6px 0px 0px;
    color: rgb(58, 221, 221);
-}
-.boxProfilPonuka{
-   border-bottom: #495057 2px solid;
-   border-right: #2b3035 2px solid;
-   border-top: #2b3035 2px solid;
-   color: white;
-   cursor: pointer;
 }
