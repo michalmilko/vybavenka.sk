@@ -1,0 +1,49 @@
+.LoginEmailPassword{
+   display: flex;
+   flex-direction: column;
+   justify-content:space-evenly;
+   align-items: center;
+   height: 400px;
+   margin: 20px 0px;
+   /* border: red solid 1px; */
+}
+.LoginName{
+   margin: 0px;
+   color: rgb(58, 221, 221);
+   margin-bottom: 20px;
+   font-size: 22px;
+    
+}
+.LoginEmail{
+   height: 50px;
+   border-radius: 20px;
+   border: none;
+   width: 300px;
+   text-align: center;
+   font-size: 19px;
+}
+.LoginEmail:focus{
+   outline: none;
+}
+.LoginPassword{
+   height: 50px;
+   border-radius: 20px;
+   border: none;
+   width: 300px;
+   text-align: center;
+   font-size: 19px;
+}
+.LoginPassword:focus{
+   outline: none;
+}
+.ResetPassword{
+   height: 20px;
+}
+.ResetPasswordButton{
+   padding: 10px;
+   margin-top: 15px;
+   border-radius: 20px;
+   border: none;
+   cursor: pointer;
+   
+}

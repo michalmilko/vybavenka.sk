@@ -17,12 +17,12 @@
    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 .LoginLogin{
-border-right: #495057 2px solid;
-border-left: #495057 2px solid;
-border-top: #495057 2px solid;
-border-bottom: #2b3035 2px solid;
-border-radius: 6px 6px 0px 0px;
-color: rgb(58, 221, 221);
+   border-right: #495057 2px solid;
+   border-left: #495057 2px solid;
+   border-top: #495057 2px solid;
+   border-bottom: #2b3035 2px solid;
+   border-radius: 6px 6px 0px 0px;
+   color: rgb(58, 221, 221);
 }
 .LoginRegister{
    border-bottom: #495057 2px solid;

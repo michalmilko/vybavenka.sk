@@ -22,7 +22,7 @@ const changeToReg = () =>{
              {LogRegSwitch}
             </div>
             <div className="CancelRegLogImage" onClick={()=>{setSwitchRegLog("RegLogFalse")}}>
-           <img src={cancelImage} alt="Cancel" />
+           <img className="CancelRegLogIcon" src={cancelImage} alt="Cancel" />
           </div>
 
          </div>
