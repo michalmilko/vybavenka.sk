@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Menu from "./components/Menu/Menu";
 import Head from "./components/Head/Head";
 import Loading from "./components/Loading";
-import LoginRegister from "./components/Head/LoginRegister/LoginRegister";
+import LoginRegister from "./components/Menu/LoginRegister/LoginRegister";
 
 const App = () =>{
 
@@ -86,7 +86,7 @@ if(headLoginIcon){
            {Obsah()}
         </div>
          <div>
-            <Menu setKategapas={setKategapas} setLoadingicon={setLoadingicon} />
+            <Menu setKategapas={setKategapas} setLoadingicon={setLoadingicon} setHeadLoginIcon={setHeadLoginIcon} />
          </div>
                     <div className={switchRegLog}>
                     {showTableLogin}

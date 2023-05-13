@@ -50,12 +50,3 @@ cursor: pointer;
 .HeadSearch:focus{
    outline: none;
 }
-.HeadLogin{
-   text-align: center;
-   width: 250px;
-   height: 60px;  
-   cursor: pointer;
-}
-.HeadLoginIcon{
-   height: 60px;
-}

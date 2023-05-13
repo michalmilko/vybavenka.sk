@@ -1,16 +1,15 @@
 .LoginEmailPassword{
    display: flex;
    flex-direction: column;
-   justify-content:space-evenly;
+   justify-content:flex-start;
    align-items: center;
-   height: 400px;
+   height: 420px;
    margin: 20px 0px;
-   /* border: red solid 1px; */
 }
 .LoginName{
-   margin: 0px;
+   margin-top: 15px;
    color: rgb(58, 221, 221);
-   margin-bottom: 20px;
+   margin-bottom: 10px;
    font-size: 22px;
     
 }
@@ -21,6 +20,7 @@
    width: 300px;
    text-align: center;
    font-size: 19px;
+   margin-bottom: 10px;
 }
 .LoginEmail:focus{
    outline: none;
@@ -36,7 +36,24 @@
 .LoginPassword:focus{
    outline: none;
 }
+.LoginProfil{
+   margin-top: 40px;
+   height: 20px;
+}
+.LoginProfilButton{
+   padding: 10px 50px;
+   font-size: 18px;
+   margin: 15px;
+   border-radius: 20px;
+   border: none;
+   cursor: pointer;
+   background-color: rgb(58, 221, 221);
+}
+.LoginProfilButton:hover{
+background-color: rgb(46, 160, 160);
+}
 .ResetPassword{
+   margin-top: 70px;
    height: 20px;
 }
 .ResetPasswordButton{
@@ -45,5 +62,11 @@
    border-radius: 20px;
    border: none;
    cursor: pointer;
-   
+   background-color: rgb(51, 51, 51);
+   border: rgb(58, 221, 221) 2px solid;
+   color: white;
+
+}
+.ResetPasswordButton:hover{
+   background-color: rgb(46, 160, 160);
 }

@@ -1,0 +1,63 @@
+.AllRegisterInput{
+   display: flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   align-items: center;
+   height: 420px;
+   margin: 30px 0px;
+}
+.RegisterName{
+   margin: 0px;
+   color: rgb(58, 221, 221);
+   margin-bottom: 10px;
+   font-size: 20px;
+   margin-top: 4px;
+}
+.RegisterUzivatel{
+   height: 45px;
+   border-radius: 20px;
+   border: none;
+   width: 250px;
+   text-align: center;
+   font-size: 19px;
+   margin-bottom: 20px;
+ 
+}
+.RegisterEmail{
+   height: 45px;
+   border-radius: 20px;
+   border: none;
+   width: 300px;
+   text-align: center;
+   font-size: 19px;
+   margin-bottom: 40px;
+}
+.RegisterEmail:focus{
+   outline: none;
+}
+.RegisterPassword{
+   height: 45px;
+   border-radius: 20px;
+   border: none;
+   text-align: center;
+   font-size: 18px;
+   margin: 4px;
+   margin-bottom: 40px;
+}
+.RegisterPassword:focus{
+   outline: none;
+}
+.RegistraciaProfilButton{
+   padding: 10px 50px;
+   font-size: 18px;
+   margin-top: 15px;
+   border-radius: 20px;
+   margin-top: 20px;
+   border: none;
+   cursor: pointer;
+   background-color: rgb(58, 221, 221);
+}
+.RegistraciaProfilButton:hover{
+   
+   background-color: rgb(46, 160, 160);
+}

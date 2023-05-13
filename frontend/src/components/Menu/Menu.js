@@ -5,8 +5,9 @@ import { useState} from "react"
 import select from "../../images/select.png"
 import add from "../../images/add.png"
 import cancel from "../../images/cancel.png"
+import LoginIcon from "../../images/LoginIcon.gif"
 
-const Menu = ({setLoadingicon, setKategapas}) => {
+const Menu = ({setLoadingicon, setKategapas, setHeadLoginIcon}) => {
 
    const [AddActive, setAddActive]=useState();
    const [ImageChange, setImageChange]=useState(add);
@@ -45,18 +46,21 @@ const Menu = ({setLoadingicon, setKategapas}) => {
    
    return(
       <div>
-        <div>
-           {AddActive}
-           <div className={changer}> 
-           {SelectActive}
-           
+            <div>
+               {AddActive}
+               <div className={changer}> 
+               {SelectActive}
+               </div>
+            </div>
+            {/* Dole ikony menu */}
+            <div className="downMenu">
+               <img className="imageSelectButton" src={ImageChangeKategoria} alt="selectFoto" onClick={()=>{SelectActiveFunk()}}/>
+               <img className="imageAddButton"src={ImageChange} alt="addFoto"onClick={()=>{AddActiveFunk()}} />
+            {/* Ikona Prihlasenia/Registracii v Menu */}
+            <div className="MenuLogin" onClick={()=>{setHeadLoginIcon(true)}}>
+               <img className="MenuLoginIcon" src={LoginIcon} alt="Login/Register"  />
+            </div>
            </div>
-       </div>
-       {/* Dole ikony menu */}
-      <div className="downMenu">
-      <img className="imageSelectButton" src={ImageChangeKategoria} alt="selectFoto" onClick={()=>{SelectActiveFunk()}}/>
-      <img className="imageAddButton"src={ImageChange} alt="addFoto"onClick={()=>{AddActiveFunk()}} />
-      </div>
       </div>
    )
 }

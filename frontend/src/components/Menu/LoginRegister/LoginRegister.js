@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./LoginRegister.css";
-import  cancelImage from "../../../images/cancel2.png";
+import  cancelImage from "../../../images/cancel.png";
 import Login from "./Login/Login"
 import Register from "./Register/Register"
 
