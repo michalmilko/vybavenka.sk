@@ -24,7 +24,7 @@ const RegisterInput = () =>{
          <div>
         {/* Heslo pri registracii */}
         <h2 className="RegisterName">Zadajte váše heslo</h2>
-       <input className="RegisterPassword" placeholder="Heslo" type="password" required minLength={5} maxLength={25} value={PasswordRegister}
+       <input className="RegisterPassword" placeholder="Vaše Heslo" type="password" required minLength={5} maxLength={25} value={PasswordRegister}
        onChange={(event) => setPasswordRegister(event.target.value)} />
     
      
@@ -32,9 +32,9 @@ const RegisterInput = () =>{
        <input className="RegisterPassword" placeholder="Zopakujte Heslo" type="password" required minLength={5} maxLength={25} value={ZnovaPasswordRegister}
        onChange={(event) => setZnovaPasswordRegister(event.target.value)} />
       </div>
-      <div className="RegistraciaProfil">
-         <button className="RegistraciaProfilButton">Registracia</button>
-      </div>
+         <div className="RegistraciaProfil">
+            <button className="RegistraciaProfilButton">Registrovať sa</button>
+         </div>
       </div>
    )
 }

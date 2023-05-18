@@ -37,7 +37,7 @@
    outline: none;
 }
 .LoginProfil{
-   margin-top: 40px;
+   margin-top: 100px;
    height: 20px;
 }
 .LoginProfilButton{
@@ -53,7 +53,7 @@
 background-color: rgb(46, 160, 160);
 }
 .ResetPassword{
-   margin-top: 70px;
+   margin-top: 40px;
    height: 20px;
 }
 .ResetPasswordButton{
@@ -69,4 +69,11 @@ background-color: rgb(46, 160, 160);
 }
 .ResetPasswordButton:hover{
    background-color: rgb(46, 160, 160);
+}
+@media only screen and (max-width: 700px)
+{
+   .LoginProfil{
+      margin-top: 85px;
+ 
+   }
 }

@@ -5,7 +5,7 @@ import { useState} from "react"
 import select from "../../images/select.png"
 import add from "../../images/add.png"
 import cancel from "../../images/cancel.png"
-import LoginIcon from "../../images/LoginIcon.gif"
+import LoginIcon from "../../images/wired-outline-268-avatar-man.gif"
 
 const Menu = ({setLoadingicon, setKategapas, setHeadLoginIcon}) => {
 

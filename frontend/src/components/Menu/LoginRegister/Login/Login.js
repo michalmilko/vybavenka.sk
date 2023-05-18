@@ -5,8 +5,8 @@ const Login = (props) =>{
    return(
       <div className="LoginWindowAll">
          <div className="LoginWindow">         
-         <p href="" className="LoginLogin">Prihlasenie</p>
-         <p href="" className="LoginRegister" onClick={()=>{props.changeToReg()}}>Registracia</p>
+         <p href="" className="LoginLogin">Prihlásenie</p>
+         <p href="" className="LoginRegister" onClick={()=>{props.changeToReg()}}>Registrácia</p>
       </div>
       <LoginInput/>
       </div>

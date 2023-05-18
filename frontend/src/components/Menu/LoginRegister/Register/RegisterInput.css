@@ -1,11 +1,13 @@
 .AllRegisterInput{
    display: flex;
    flex-direction: column;
+   /* flex-wrap: wrap; */
    justify-content:flex-start;
    align-items: center;
    height: 420px;
    margin: 30px 0px;
 }
+
 .RegisterName{
    margin: 0px;
    color: rgb(58, 221, 221);
@@ -21,7 +23,9 @@
    text-align: center;
    font-size: 19px;
    margin-bottom: 20px;
- 
+}
+.RegisterUzivatel{
+   outline: none;
 }
 .RegisterEmail{
    height: 45px;
@@ -60,4 +64,23 @@
 .RegistraciaProfilButton:hover{
    
    background-color: rgb(46, 160, 160);
+}
+@media only screen and (max-width: 700px)
+{
+.AllRegisterInput{
+   width: 400px;
+  margin: 20px 0px;
+   }
+   .RegisterUzivatel{
+      margin-bottom: 0px;
+   }
+   .RegisterEmail{
+      margin-bottom: 20px;
+   }
+   .RegistraciaProfilButton{
+      margin-top: 25px;
+   }
+   .RegisterPassword{
+      margin-bottom: 10px;
+   }
 }

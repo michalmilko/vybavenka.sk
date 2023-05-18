@@ -9,12 +9,13 @@
    width: 250px;
    text-align: center;
 }
-@media only screen and (max-width: 450px)
+@media only screen and (max-width: 600px)
 {
 .NadpisLogo{
 font-size: 18px;
-margin: 10px;
+margin: auto;
 cursor: pointer;
+width: 200px;
 }
 }
 .Head{
@@ -39,11 +40,19 @@ cursor: pointer;
    padding: 0px 10px;
    height: 40px;
 }
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 700px)
 {
 .HeadSearch{
-   margin: 10px 0px;
-   margin-right: 3px;
+   margin: auto;
+   margin-right: 20px;
+   max-width: 200px;
+   }
+}
+@media only screen and (max-width: 600px)
+{
+.HeadSearch{
+   margin: auto;
+   margin-right: 5px;
    max-width: 200px;
    }
 }
